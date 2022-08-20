@@ -5,9 +5,7 @@ simple diary using React.js
 1. Mount(화면에 나타남) → Update(리렌더) → UnMount(화면에서 사라짐)
     
     class에서만 사용 가능
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d35fa9ed-4511-42fa-b17e-8f08c957108e/Untitled.png)
-    
+
 2. **React Hooks**
     1. use 키워드를 사용해 함수형 컴포넌트에서 사용
     2. 두 개의 파라미터 전달
@@ -18,7 +16,6 @@ simple diary using React.js
             2. **update → 두번째 인자X**
             3. **unmount → callback함수가 return 값 가지면!**
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2fbfb842-ad94-41b7-8502-823ae2873659/Untitled.png)
     
 3. Lifecycle 예시
     
@@ -146,13 +143,9 @@ Components 계층 구조, props, state 확인 가능
 
 # 연산 결과 재사용 - useMemo
 
-1. Memoization을 이용한 연산 과정 최적화
-2. memoization이란?
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0399e4d-a523-4a13-a332-9d99f1f03ca6/Untitled.png)
-    
-3. 함수로써, 함수 결과값을 리턴!!
-4. 예시
+1. Memoization을 이용한 연산 과정 최적화    
+2. 함수로써, 함수 결과값을 리턴!!
+3. 예시
     
     감정 점수는 수정이 불가하므로 data가 추가될 때, 즉 data의 길이가 변화할때만 실행하면 됨
     
@@ -181,10 +174,7 @@ for문 사용하지 않고 emotion≥3인 객체의 길이를 구함!
 
 # 컴포넌트 재사용 - React.memo
 
-1. 함수형 컴포넌트에 업데이트 조건 걸기 → 불필요한 리렌더 해결
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f6da9bb0-8289-4be0-a4ba-aacffdd5f8bb/Untitled.png)
-    
+1. 함수형 컴포넌트에 업데이트 조건 걸기 → 불필요한 리렌더 해결    
 2. 컴포넌트가 동일한 props로 동일한 결과를 렌더링해낸다면, `React.memo`를 호출, 결과를 메모이징(Memoizing)하도록 래핑하여 경우에 따라 성능 향상
  → React는 컴포넌트를 렌더링하지 않고 마지막으로 렌더링된 결과를 재사용
 3. React.memo는 고차 컴퍼넌트
@@ -237,10 +227,6 @@ for문 사용하지 않고 emotion≥3인 객체의 길이를 구함!
 js 기본 객체 비교 → 얕은 비교
 값에 의한 비교X, 주소에 의한 비교
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/83c48664-452f-43e2-869f-7c44c21b9c14/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/122e9037-4e5b-4ff6-8f53-c1afef308a97/Untitled.png)
-
 1. `areEqual`이 true 반환 → 리렌더X
     
     ```jsx
@@ -290,8 +276,3 @@ react developer tools에서 Components의 Highlight updates when components rend
         setData((data) => [newItem, ...data]);      //일기 상태 변화 함수, 함수형 업데이트
       }, []);
     ```
-    
-
-# 최적화 완성
-
-# 복잡한 상태 관리 로직 분리 - useReducer
