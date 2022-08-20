@@ -133,12 +133,6 @@ const getData = async () => {
   }, []);
 ```
 
-# React developer tools
-
-chrome 확장 기능
-
-Components 계층 구조, props, state 확인 가능
-
 ## 최적화
 
 # 연산 결과 재사용 - useMemo
